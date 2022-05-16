@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Header } from "../styles/Home";
+import { Card } from "../components/Card";
 
 const Home: NextPage = () => {
   return (
@@ -30,7 +31,9 @@ const Home: NextPage = () => {
           </button>
         </div>
       </Header>
-      <main></main>
+      <main>
+        <Card />
+      </main>
     </>
   );
 };

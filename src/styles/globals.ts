@@ -25,5 +25,6 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: var(--font-title);
+    background-color: var(--background);
   }
 `
