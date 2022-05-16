@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { Header } from "../styles/Home";
-import { Card } from "../components/Card";
+import { Header } from "../components/Header";
+import { CardSection } from "../components/CardSection";
 
 const Home: NextPage = () => {
   return (
@@ -16,23 +15,9 @@ const Home: NextPage = () => {
         <meta name="robots" content="noindex"></meta>
       </Head>
 
-      <Header>
-        <div className="container">
-          <div className="logo">
-            <Image
-              src="/icons/Logo.svg"
-              alt=""
-              layout="fill"
-              objectFit="contain"
-            ></Image>
-          </div>
-          <button type="button" className="button">
-            Nova transação
-          </button>
-        </div>
-      </Header>
+      <Header />
       <main>
-        <Card />
+        <CardSection />
       </main>
     </>
   );

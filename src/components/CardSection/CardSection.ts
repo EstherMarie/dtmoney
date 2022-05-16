@@ -1,11 +1,24 @@
 import styled from "styled-components";
 
-export const StyledCard = styled.div`
-  width: 300px;
-  /* height: 200px; */
-
+export const StyledCardSection = styled.section`
   position: relative;
-  top: -150px;
+  top: -100px;
+
+  .card-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    @media (max-width: 1080px) {
+      gap: 16px;
+    }
+  }
+`
+
+
+export const StyledCard = styled.li`
+  min-width: 300px;
+  /* height: 200px; */
 
   border-radius: 5px;
   
@@ -50,5 +63,10 @@ export const StyledCard = styled.div`
       line-height: 12px;
       color: var(--text);
     }
+  }
+
+  .cardTotal {
+    background-color: var(--green);
+    color: var(--white);
   }
 `
