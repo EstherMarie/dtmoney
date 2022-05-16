@@ -8,12 +8,17 @@ import { Container } from "../container";
 
 export function CardSection() {
   return (
-    <StyledCardSection>
+    <StyledCardSection tabIndex={0}>
       <Container>
         <ul className="card-list">
-          <Card title="Entrada" cash="1.500" icon={iconEntradas} />
-          <Card title="Saida" cash="500" icon={iconSaidas} />
-          <Card title="Total" cash="1.000" icon={iconTotal} />
+          <Card
+            title="Entrada"
+            cash={1500}
+            icon={iconEntradas}
+            date="13/04/2022"
+          />
+          <Card title="Saida" cash={500} icon={iconSaidas} />
+          <Card title="Total" cash={1000} icon={iconTotal} />
         </ul>
       </Container>
     </StyledCardSection>

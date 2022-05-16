@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Header } from "../components/Header";
 import { CardSection } from "../components/CardSection";
+import { Listagem } from "../components/Listagem";
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Header />
       <main>
         <CardSection />
+        <Listagem />
       </main>
     </>
   );

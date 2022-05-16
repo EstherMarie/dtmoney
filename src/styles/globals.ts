@@ -4,6 +4,10 @@ import { normalize } from 'styled-normalize';
 export const GlobalStyles = createGlobalStyle`
   ${normalize}
 
+  * {
+    box-sizing: border-box;
+  }
+
   :root {
     /* Main Colors */
     --blue: #5429CC;
@@ -26,5 +30,15 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: var(--font-title);
     background-color: var(--background);
+  }
+
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
   }
 `
