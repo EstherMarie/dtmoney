@@ -12,12 +12,12 @@ export function CardSection() {
       <Container>
         <ul className="card-list">
           <Card
-            title="Entrada"
+            title="Entradas"
             cash={1500}
             icon={iconEntradas}
             date="13/04/2022"
           />
-          <Card title="Saida" cash={500} icon={iconSaidas} />
+          <Card title="Saídas" cash={500} icon={iconSaidas} />
           <Card title="Total" cash={1000} icon={iconTotal} />
         </ul>
       </Container>

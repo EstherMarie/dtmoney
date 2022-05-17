@@ -3,7 +3,7 @@ import React from "react";
 import { StyledCard } from "../CardSection";
 
 interface CardProps {
-  title: "Entrada" | "Saida" | "Total";
+  title: "Entradas" | "Saídas" | "Total";
   cash: number;
   date?: string;
   icon: string;
@@ -13,8 +13,18 @@ export function Card({ title, cash, date, icon }: CardProps) {
   let fullDate = new Date();
   let data = `${fullDate.getDay()} de ${fullDate.getMonth()}`;
 
+  let cardClass = "";
+
+  if (title != "Total") {
+    cardClass = "";
+  } else if (cash >= 0) {
+    cardClass = "cardTotal--green";
+  } else {
+    cardClass = "cardTotal--red";
+  }
+
   return (
-    <StyledCard className={title == "Total" ? "cardTotal" : ""}>
+    <StyledCard className={cardClass}>
       <div className="card-header">
         <p className="title">{title}</p>
         <div className="icon">

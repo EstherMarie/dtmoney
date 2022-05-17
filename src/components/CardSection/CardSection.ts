@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const StyledCardSection = styled.section`
   position: relative;
-  top: -100px;
-  overflow-x: scroll;
+  top: -84px;
+  overflow-x: auto;
 
   .card-list {
     display: flex;
@@ -16,7 +16,7 @@ export const StyledCardSection = styled.section`
 
     padding-right: 24px;
 
-    .cardTotal {
+    .cardTotal--green {
       background-color: var(--green);
       color: var(--white);
 
@@ -25,6 +25,29 @@ export const StyledCardSection = styled.section`
         margin: 0;
       }
     }
+
+    .cardTotal--red {
+      background-color: var(--red);
+      color: var(--white);
+
+      p {
+        color: var(--white);
+        margin: 0;
+      }
+    }
+  }
+
+  @media (min-width: 980px) {
+      .card-list {
+        width: 100%;
+        overflow-x: unset;
+        display: flex;
+        justify-content: space-between;
+
+        padding-right: 0;
+
+        gap: 32px;
+      }
   }
 `;
 
@@ -78,6 +101,19 @@ export const StyledCard = styled.li`
       font-size: 12px;
       line-height: 12px;
       color: var(--text);
+    }
+  }
+
+  @media (min-width: 980px) {
+    height: 136px;
+    width: 352px;
+
+    .card-body {
+      margin-top: 7.5px;
+
+      .text {
+        display: none;
+      }
     }
   }
 `;
