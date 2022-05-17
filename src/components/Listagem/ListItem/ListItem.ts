@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledListItem = styled.div`
+export const StyledListItem = styled.li`
   height: 128px;
   background-color: var(--white);
   border-radius: 5px;
@@ -16,7 +16,6 @@ export const StyledListItem = styled.div`
 
   .card-body {
     height: 60%;
-    gap: 20px;
 
     .title {
       font-family: Poppins;
@@ -26,12 +25,20 @@ export const StyledListItem = styled.div`
       color: var(--title);
     }
 
-    .price {
+    .price-income {
       font-family: Poppins;
       font-size: 20px;
       font-weight: 400;
       line-height: 30px;
       color: var(--green);
+    }
+
+    .price-outcome {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      color: var(--red);
     }
   }
 
@@ -47,6 +54,37 @@ export const StyledListItem = styled.div`
       font-weight: 400;
       line-height: 21px;
       color: var(--text);
+    }
+  }
+
+  @media (min-width: 700px) {
+    height: 64px;
+    padding: 20px 32px;
+
+    flex-direction: row;
+    align-items: center;
+
+    .card-body {
+      width: 70%;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &>div {
+        width: 35%;
+      }
+
+      .price-income, .price-outcome {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+
+    .card-footer {
+      width: 33%;
+      justify-content: space-between;
     }
   }
 `;
