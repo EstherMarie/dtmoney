@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledListagem = styled.section`
+export const StyledListagem = styled.div`
   width: 100%;
   position: relative;
   top: -84px;
@@ -38,6 +38,8 @@ export const StyledListagem = styled.section`
   }
 
   @media (min-width: 700px) {
+    margin-top: 32px;
+    
     .title-section {
       clip: rect(0 0 0 0); 
       clip-path: inset(50%);
@@ -65,7 +67,7 @@ export const StyledListagem = styled.section`
       font-weight: 400;
       line-height: 24px;
 
-      h3 {
+      p {
         margin-bottom: 4px;
         font-weight: 400;
       }

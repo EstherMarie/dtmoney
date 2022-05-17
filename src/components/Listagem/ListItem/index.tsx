@@ -1,4 +1,4 @@
-import { StyledListItem } from "./ListItem";
+import { StyledListItem } from "./ListItem.styled";
 
 interface ListItemProps {
   tipo: "income" | "outcome";

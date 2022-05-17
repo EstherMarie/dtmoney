@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { StyledCard } from "../CardSection";
+import { StyledCard } from "./Card.styled";
 
 interface CardProps {
   title: "Entradas" | "Saídas" | "Total";
@@ -26,7 +26,7 @@ export function Card({ title, cash, date, icon }: CardProps) {
   return (
     <StyledCard className={cardClass}>
       <div className="card-header">
-        <p className="title">{title}</p>
+        <h3 className="title">{title}</h3>
         <div className="icon">
           <Image src={icon} alt="" />
         </div>

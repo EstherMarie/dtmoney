@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Logo from "../../../public/icons/Logo.svg";
-import { StyledHeader } from "./Header";
+import { StyledHeader } from "./Header.styled";
 import { Container } from "../container";
 
 export function Header() {
@@ -14,7 +14,7 @@ export function Header() {
           <h1>
             <Image
               src={Logo}
-              alt="dt Money"
+              alt="dt money"
               layout="fill"
               objectFit="contain"
             ></Image>

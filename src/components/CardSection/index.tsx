@@ -1,4 +1,4 @@
-import { StyledCardSection } from "./CardSection";
+import { StyledCardSection } from "./CardSection.styled";
 import { Card } from "./Card";
 
 import iconEntradas from "../../../public/icons/Entradas.svg";
@@ -10,6 +10,7 @@ export function CardSection() {
   return (
     <StyledCardSection tabIndex={0}>
       <Container>
+        <h2 className="sr-only">Saldo</h2>
         <ul className="card-list">
           <Card
             title="Entradas"
